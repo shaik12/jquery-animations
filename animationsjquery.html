@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="jquery-1.11.3.min.js"></script>
+</head>
+<body>
+
+<div>
+<h1 id="heading"> The costliest art mishaps</h1>  
+<h2 id="heading2"> What caused the art mishap?</h2>
+<p class="para"> The 17th century painting inspired by Leonardo Da Vinci is back in display.</p>
+<p class="para"> The painted titled flowers was painted by Italian artist Paolo Porpora.</p>
+    
+</div>
+    
+<div >
+<table border=1 id="table1" >
+
+<tr>
+<td>NEwYork Times </td>    
+<td>10</td>
+    </tr>
+<tr>    
+<td> NewYork Post</td>
+<td>20</td>
+    </tr>
+<tr>    
+<td>Jersey city Journal</td>
+<td>3</td>
+</tr> 
+    <tr> <td>Washington times</td>   
+<td> 23</td>
+    </tr>
+    
+</table>    
+    
+    
+</div>
+<br>    
+
+<div>
+    <input type="button" value="hide" id="hide"  />
+    <input type="button" value="show" id="show"  />
+<input type="button" id="b1" value="click me"  /><br>
+    <br>
+    <input type="text" name="name"  id="in1" value="name"  /><br>
+    <br>
+    <input type="button" value="hide" id="b3" /><br>
+    <br>
+    <input type="button" value="show"  id="b4"/>
+    <input type="button" value="change content" id="button1"  />
+    <input type="button" value="change again" id="button2"  />
+    <input type="button" value="chnage text" id="button3"  />
+    <input type="button" value="toggle" id="button4"  />
+    </div>
+    <div>
+    <h2> Select Language</h2>
+    <ol>
+    <li> Java </li>    
+    <li> C++ </li>
+    <li> SQL</li>
+    <li> Java Script</li>
+        <ol id="list1">
+        <li> JQuery</li>
+        <li> Angular JS</li>
+        <li> Html</li>
+        </ol>
+    <li> DBMS</li>    
+
+        
+        
+    </ol>
+ </div>
+<a href="colors.html"> This Is a Demo</a>
+    
+    
+    
+    
+</body>
+    
+    <script type="text/javascript">
+   $(document).ready(function(){
+        $("#hide").click(function(){
+            $("#heading2").hide(1000)
+        })
+    });
+    $(document).ready(function(){
+        $("#show").click(function(){
+            $("#heading2").show(3000)
+        })
+    });    
+        
+    $(document).ready(function(){
+        $("#b2").click(function(){
+            $("p.para").hide()
+        })
+    });   
+        
+    $(document).ready(function(){
+        $("#b1").click(function(){
+            $("p:first").hide()
+        })
+    });    
+     $(document).ready(function(){
+        $("#b4").click(function(){
+            $("ol li:last-child").hide()
+        })
+    });        
+     $(document).ready(function(){
+         $("input").focus(function(){
+          $(this).css("background-color", "#cccccc");
+    });
+    $("input").blur(function(){
+        $(this).css("background-color", "#fffccc");
+       
+    })
+     });
+       
+        
+$(document).ready(function(){
+    $("h1").on({
+        mouseenter: function(){
+            $(this).css("background-color", "lightgray");
+        },  
+        mouseleave: function(){
+            $(this).css("background-color", "lightblue");
+        }, 
+        click: function(){
+            $(this).css("background-color", "yellow");
+        }  
+    });
+});   
+        
+       $(document).ready(function(){
+           $("#button1").click(function(){
+               $(".para").html("<i> This is the changed content of para </i>");
+           })
+        $("#button2").click(function(){
+            $(".para").text(" This is the changed content of para and html tags dont work here");
+           })
+          $(document).ready(function(){
+              $("#button3").click(function(){
+                  $("#in1").val("New Text");
+       });
+          });
+       });
+        
+        
+            $(document).ready(function(){
+    $("#button4").click(function(){
+        $("#table1").toggle();
+    });
+});
+        
+    
+        
+        
+    </script>
+
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head></head>
+<body>
+    <!--<body onclick="changecolor()">-->
+    
+    <input type="button" value="click me" onclick="changecolor()"  />
+     
+    
+    <script>
+   
+         var i=0;
+         var col=["red","yellow","green","blue","purple","grey","white","aqua"];
+        function changecolor()
+        {
+           
+            
+                document.getElementsByTagName("BODY")[0].style.backgroundColor= col[i];
+                i++;
+            
+            if(i>col.length)
+                i=0;
+        } 
+     
+    
+    
+    
+    </script>
+
+    </body>
+
+</html>
